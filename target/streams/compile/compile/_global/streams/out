@@ -1,4 +1,10 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\admin\IdeaProjects\Projet_Scala\airport.scala:14:1: expected class or object definition[0m
-[0m[[0m[31merror[0m] [0m[0mAirport.airportsData[0m
-[0m[[0m[31merror[0m] [0m[0m^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\admin\IdeaProjects\Projet_Scala\airport.scala:8:24: not found: value Source[0m
+[0m[[0m[31merror[0m] [0m[0m    val airportsData = Source.fromFile(new File("./data/airports.csv"), "ISO-8859-1").getLines.drop(1).toList[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\admin\IdeaProjects\Projet_Scala\airport.scala:9:25: not found: value Source[0m
+[0m[[0m[31merror[0m] [0m[0m    val countriesData = Source.fromFile(new File("./data/countries.csv"), "ISO-8859-1").getLines.drop(1).toList[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\admin\IdeaProjects\Projet_Scala\airport.scala:10:23: not found: value Source[0m
+[0m[[0m[31merror[0m] [0m[0m    val runwaysData = Source.fromFile(new File("./data/runways.csv"), "ISO-8859-1").getLines.drop(1).toList[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0mthree errors found[0m
