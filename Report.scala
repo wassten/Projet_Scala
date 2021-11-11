@@ -18,12 +18,14 @@ object Report {
 
     //Top 10 
     
-    val topTenLowestCountries: List[(String, Int)] = listeTrieeAsc.take(10)
-    val topTenHighestCountries: List[(String, Int)] = listeTrieeDesc.take(10)
+    val topTenLowestCountries: List[(String, Int)] = listeTrieeAsc.map { case (code, nb) => (getCountryWithCodeOrCountry(code), nb) }.take(10)
+    val topTenHighestCountries: List[(String, Int)] = listeTrieeDesc.map { case (code, nb) => (getCountryWithCodeOrCountry(code), nb) }.take(10)
 
     val topTenRunways: List[String] = runwaysLatitude.take(10)    
     
     
     val runwaysType: Map[String, String] = runwaysData.map { x => (x.split(",")(2), x.split(",")(5)) }.toMap
+
+
 
 }
