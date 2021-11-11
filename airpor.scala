@@ -2,16 +2,16 @@ import scala.io.Source
 import java.io.File  
   
 
-case class airports_and_runways(country: String, airport_name: String, airport_code: String, runways: List[String] = List[String]())
+case class airportsAndRunways(country: String, airportName: String, airportCode: String, runways: List[String] = List[String]())
 
 object Airport {
     
-    val airports_file: String = "./public/airports.csv"
-    val countries_file: String = "./public/countries.csv"
-    val runways_file: String = "./public/runways.csv"
+    val airportsFile: String = "./public/airports.csv"
+    val countriesFile: String = "./public/countries.csv"
+    val runwaysFile: String = "./public/runways.csv"
 
-    val airports_data = Source.fromFile(new File(airports_file), "ISO-8859-1").getLines.drop(1)
-    val countries_data = Source.fromFile(new File(countries_file), "ISO-8859-1").getLines.drop(1)
-    val runways_data = Source.fromFile(new File(runways_file), "ISO-8859-1").getLines.drop(1)
+    val airportsData = Source.fromFile(new File(airportsFile), "ISO-8859-1").getLines.drop(1)
+    val countriesData = Source.fromFile(new File(countriesFile), "ISO-8859-1").getLines.drop(1)
+    val runwaysData = Source.fromFile(new File(runwaysFile), "ISO-8859-1").getLines.drop(1)
 
 }
