@@ -1,7 +1,7 @@
 import java.io.File
   
 
-case class airportsAndRunways(country: String, airportName: String, airportCode: String, runways: List[String] = List[String]())
+case class airportsAndRunways(country: String, airportName: String, airportId: String, runways: List[String] = List[String]())
 
 object Airport {
 
