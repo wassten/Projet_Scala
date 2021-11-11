@@ -10,5 +10,3 @@ object Airport {
     val runwaysData = Source.fromFile(new File("./data/runways.csv"), "ISO-8859-1").getLines.drop(1).toList
 
 }
-
-Airport.airportsData
