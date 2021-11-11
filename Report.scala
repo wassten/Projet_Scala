@@ -5,7 +5,7 @@ object Report {
 
     //Creation Liste Tuple (country, nbAirports), Runways
 
-    val countryAndNbAirports: List[(String, Int)] = airportsData.map(_.split(",")(8)).groupBy(identity).mapValues { _.size }.toList
+    val countryAndNbAirports: List[(String, Int)] = airportsData.map(_.split(",")(8)).groupBy(identity).view.mapValues { _.size }.toList
     
     val runwaysLatitude: List[String] = runwaysData.map(x => Try { x.split(",")(8) }).groupBy(identity)
     .mapValues { _.size }.toList
@@ -19,8 +19,8 @@ object Report {
 
     //Top 10 
     
-    val topTenLowestCountries: List[(String, Int)] = listeTrieeAsc.map { case (code, nb) => (getCountryWithCodeOrCountry(code), nb) }.take(10)
-    val topTenHighestCountries: List[(String, Int)] = listeTrieeDesc.map { case (code, nb) => (getCountryWithCodeOrCountry(code), nb) }.take(10)
+    val topTenLowestCountries: List[(String, Int)] = listeCountriesTrieeAsc.map { case (code, nb) => (getCountryWithCodeOrCountry(code), nb) }.take(10)
+    val topTenHighestCountries: List[(String, Int)] = listeCountriesrieeDesc.map { case (code, nb) => (getCountryWithCodeOrCountry(code), nb) }.take(10)
 
     val topTenRunways: List[String] = runwaysLatitude.take(10)    
     
