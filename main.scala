@@ -12,6 +12,6 @@ object Main extends App {
   def sous_program(choix : String): Unit = choix match {
     case "1" => println(topCountries())
     case "2" => 
-    case "3" => println()
+    case "3" => println(topRunways())
   }
 }
