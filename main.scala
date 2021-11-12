@@ -1,10 +1,11 @@
 object Main extends App {
-   println("Quel est votre choix ? \n1 - Report \n2 - Query")
+println("Quel est votre choix ? \nReport (R) \nQuery (Q)")
   val choix = scala.io.StdIn.readLine()
 
 
   def program(choix : String): Unit = choix match {
-    case "1" => topCountries()
-    case "2" => 
+    case "R" => println(topCountries())
+    case "Q" => println("ERROR 418 : I'm a teapot")
+  }
 
-}
+}  
