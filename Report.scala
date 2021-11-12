@@ -31,7 +31,7 @@ object Report {
     
     def topRunways(): Unit = {
         val runwaysAndLat: List[String] = runwaysData.map(x => Try { x.split(",")(8) }.getOrElse("")).groupBy(identity)
-      .view.mapValues { _.size }.toListé.take(10).map { case (id, count) => id }
+      .view.mapValues { _.size }.toList.take(10).map { case (id, count) => id }
 
         runwaysAndLat.foreach{println()
         }        
