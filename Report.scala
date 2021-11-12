@@ -29,16 +29,13 @@ object Report {
  
     }   
     
-    val runwaysType: Map[String, String] = runwaysData.map { x => (x.split(",")(2), x.split(",")(5)) }.toMap
+    def topRunways(): Unit = {
+        val runwaysAndLat: List[String] = runwaysData.map(x => Try { x.split(",")(8) }.getOrElse("")).groupBy(identity)
+      .view.mapValues { _.size }.toListé.take(10).map { case (id, count) => id }
 
-
-
-    val runwaysLatitude: List[String] = runwaysData.map(x => Try { x.split(",")(8) }).groupBy(identity)
-    .mapValues { _.size }.toList
-
-    val listeRunways: List[String] = runwaysLatitude.sortWith(-_._2 < -_._2)
-
-    val topTenRunways: List[String] = runwaysLatitude.take(10)       
+        runwaysAndLat.foreach{println()
+        }        
+  }    
 
 
 
