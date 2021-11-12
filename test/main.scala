@@ -8,7 +8,7 @@ object Main extends App {
       val choix2 = scala.io.StdIn.readLine()
       sous_program(choix2)
     case "2" => 
-
+  }
   def sous_program(choix : String): Unit = choix match {
     case "1" => println(topCountries())
     case "2" => 
