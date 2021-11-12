@@ -18,8 +18,8 @@ object Report {
 
         //Top 10 
         
-        val topTenLowestCountries: List[(String, Int)] = listeCountriesTrieeAsc.map { case (code, nb) => (getCountryWithCodeOrCountry(code), nb) }.take(10)
-        val topTenHighestCountries: List[(String, Int)] = listeCountriesrieeDesc.map { case (code, nb) => (getCountryWithCodeOrCountry(code), nb) }.take(10)
+        val topTenLowestCountries: List[(String, Int)] = listeCountriesTrieeAsc.take(10)
+        val topTenHighestCountries: List[(String, Int)] = listeCountriesrieeDesc.take(10)
 
         println("Top 10 countries with highest number of airports :" + '\n')
         topTenHighestCountries.foreach(println)
